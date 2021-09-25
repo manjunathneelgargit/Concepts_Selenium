@@ -154,6 +154,8 @@
 	at java.base/java.lang.Thread.run(Thread.java:832)
 ... Removed 14 stack frames
 </div> <!-- stack-trace -->
+                  <em>
+(Update Contact Description)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -169,6 +171,8 @@
                   <a name="createContact">
                   </a> <!-- createContact -->
                   <span class="method-name">createContact</span>
+                  <em>
+(Create Contact Description)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -176,6 +180,8 @@
                   <a name="deleteContact">
                   </a> <!-- deleteContact -->
                   <span class="method-name">deleteContact</span>
+                  <em>
+(Delete Contact Description)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -192,6 +198,7 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;extentReports_In_Framework_Listeners_Scrnsht.ListenerImp&quot;/&gt;
+    &lt;listener class-name=&quot;extentReports_In_Framework_Listeners_Scrnsht.MethodInterceptor&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
@@ -237,13 +244,13 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'updateContact')
+data.setCell(0, 1, 'createContact')
 data.setCell(0, 2, 'extentReports_In_Framework_Listeners_Scrnsht.Script')
-data.setCell(0, 3, 18);
+data.setCell(0, 3, 23);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createContact')
+data.setCell(1, 1, 'updateContact')
 data.setCell(1, 2, 'extentReports_In_Framework_Listeners_Scrnsht.Script')
-data.setCell(1, 3, 6);
+data.setCell(1, 3, 3);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'deleteContact')
 data.setCell(2, 2, 'extentReports_In_Framework_Listeners_Scrnsht.Script')
@@ -252,7 +259,7 @@ window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 ms</span>
+              <span class="suite-total-time">Total running time: 28 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -296,34 +303,34 @@ return data;
                 <span class="method-start">11 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">updateContact</span>
-                <span class="method-start">4034 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
                 <span class="method-name">createContact</span>
-                <span class="method-start">4260 ms</span>
+                <span class="method-start">3986 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">configAM(public void extentReports_In_Framework_Listeners_Scrnsht.Script.createContact(), [TestResult name=cr...)</span>
-                <span class="method-start">4267 ms</span>
+                <span class="method-start">4013 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">deleteContact</span>
-                <span class="method-start">4707 ms</span>
+                <span class="method-start">4283 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">configAM(public void extentReports_In_Framework_Listeners_Scrnsht.Script.deleteContact(), [TestResult name=de...)</span>
-                <span class="method-start">4714 ms</span>
+                <span class="method-start">4287 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">updateContact</span>
+                <span class="method-start">4806 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">configAM(public void extentReports_In_Framework_Listeners_Scrnsht.Script.updateContact(), [TestResult name=up...)</span>
-                <span class="method-start">5033 ms</span>
+                <span class="method-start">5382 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">configAC</span>
-                <span class="method-start">5889 ms</span>
+                <span class="method-start">6211 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

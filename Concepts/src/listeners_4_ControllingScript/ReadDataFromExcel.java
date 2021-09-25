@@ -41,7 +41,6 @@ public class ReadDataFromExcel
 				String key = sh.getRow(0).getCell(j).getStringCellValue();
 				String value = sh.getRow(i+1).getCell(j).getStringCellValue();
 				map.put(key, value);
-				//	data[i] = map;
 			}
 			ls.add(map);
 		}

@@ -1,9 +1,8 @@
-package listeners_4_ControllingScript;
+package extentReports_In_Framework_Listeners_Scrnsht;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import org.testng.IMethodInstance;
 import org.testng.IMethodInterceptor;
 import org.testng.ITestContext;
@@ -21,8 +20,8 @@ public class MethodInterceptor implements IMethodInterceptor
 
 		List<IMethodInstance> result = new ArrayList<IMethodInstance>(); //This List will store which all scripts to be executed in runtime
 
-		List<Map<String, String>> list = ReadDataFromExcel.readDataFromExcel();
-
+		List<Map<String, String>> list = FileUtils.readDataFromExcel();
+		System.out.println(list);
 		for(int i=0; i<methods.size();i++)
 		{
 			for(int j=0;j<list.size();j++)
@@ -42,4 +41,5 @@ public class MethodInterceptor implements IMethodInterceptor
 		}
 		return result;
 	}
+
 }

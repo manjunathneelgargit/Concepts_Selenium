@@ -3,6 +3,7 @@
 <suite name="Suite">
 <listeners>
 	<listener class-name="extentReports_In_Framework_Listeners_Scrnsht.ListenerImp"/>
+	<listener class-name="extentReports_In_Framework_Listeners_Scrnsht.MethodInterceptor"/>
 </listeners>
   <test thread-count="5" name="Test" parallel="methods">
     <classes>

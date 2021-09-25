@@ -27,7 +27,9 @@ public class ListenerImp implements ITestListener, ISuiteListener
 	@Override
 	public void onTestStart(ITestResult result) 
 	{
-		ExtentConfig.createTest(result.getMethod().getMethodName());
+		String methodName = result.getMethod().getMethodName();
+		String methodDescription = result.getMethod().getDescription();
+		ExtentConfig.createTest("Script Name : "+methodName+"  Description : "+methodDescription);
 	}
 
 	@Override

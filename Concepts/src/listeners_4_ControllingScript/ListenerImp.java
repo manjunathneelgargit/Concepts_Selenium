@@ -6,6 +6,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import extentReports_In_Framework_Listeners_Scrnsht.ExtentConfig;
+
 public class ListenerImp implements ITestListener, ISuiteListener
 {
 
@@ -22,9 +24,12 @@ public class ListenerImp implements ITestListener, ISuiteListener
 	}
 
 	@Override
-	public void onTestStart(ITestResult result) {
+	public void onTestStart(ITestResult result) 
+	{
+		String methodName = result.getMethod().getMethodName();
+		String methodDescription = result.getMethod().getDescription();
+		ExtentConfig.createTest("Script Name : "+methodName+"   Description : "+methodDescription);
 		System.out.println("Before method in listener");	
-		
 	}
 
 	@Override
@@ -47,7 +52,6 @@ public class ListenerImp implements ITestListener, ISuiteListener
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
 		
 	}
 
