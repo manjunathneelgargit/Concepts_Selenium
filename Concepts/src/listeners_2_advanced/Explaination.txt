@@ -1,0 +1,18 @@
+https://www.youtube.com/watch?v=TZq64ez7Iqo&list=PL9ok7C7Yn9A_JZFMrhrgEwfqQGiuyvSkB&index=21
+
+The main points we are covering is
+1. Earlier we used to configure extent report config method or db connection methods in @Before suite
+   and we used to add @Listeners annotation in every script file we write which was resulting in 
+   tightely coupling of code. We should not do that.
+   The solution for the above problem is to achieve that by Listeners
+   
+ Steps to overcome above problem
+ 1. Create a class and that class should implement ITestListener and ISuiteListener classes
+ 2. Provide implementation for all the methods.
+ 	i. You can now provide extent report config method or db connection methods in onStart()
+ 3. Add the following code in testng.xml between <suite> and <test>
+ 	<listeners>
+		<listener class-name="listeners_2_advanced.ListenerImp" />
+	</listeners>
+ ____________________________________________________________________________________________________________
+ 

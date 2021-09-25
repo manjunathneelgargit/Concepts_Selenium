@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-09-24T16:21:52Z" name="Suite" finished-at="2021-09-24T16:23:16Z" duration-ms="83884">
+    <groups>
+    </groups>
+    <test started-at="2021-09-24T16:21:52Z" name="Test" finished-at="2021-09-24T16:23:16Z" duration-ms="83884">
+      <class name="dataProvidersParallel.Script">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:21:52Z" name="configBS" finished-at="2021-09-24T16:21:52Z" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBS -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:21:53Z" name="configBM" finished-at="2021-09-24T16:22:02Z" duration-ms="9003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:21:53Z" name="configBM" finished-at="2021-09-24T16:22:01Z" duration-ms="8186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:21:53Z" name="configBM" finished-at="2021-09-24T16:22:02Z" duration-ms="8888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createContact(java.lang.String, java.lang.String)[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:01Z" name="createContact" data-provider="getAllDataFromExcel" finished-at="2021-09-24T16:22:15Z" duration-ms="14013" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[First Name 1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Last Name 1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+        <test-method signature="createContact(java.lang.String, java.lang.String)[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:02Z" name="createContact" data-provider="getAllDataFromExcel" finished-at="2021-09-24T16:22:16Z" duration-ms="13868" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[First Name 3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Last Name 3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+        <test-method signature="createContact(java.lang.String, java.lang.String)[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:02Z" name="createContact" data-provider="getAllDataFromExcel" finished-at="2021-09-24T16:22:16Z" duration-ms="13470" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[First Name 2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Last Name 2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:15Z" name="configAM" finished-at="2021-09-24T16:22:17Z" duration-ms="1459" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:16Z" name="configAM" finished-at="2021-09-24T16:22:17Z" duration-ms="1184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:16Z" name="configAM" finished-at="2021-09-24T16:22:17Z" duration-ms="917" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:17Z" name="configBM" finished-at="2021-09-24T16:22:25Z" duration-ms="8719" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:17Z" name="configBM" finished-at="2021-09-24T16:22:25Z" duration-ms="8625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:17Z" name="configBM" finished-at="2021-09-24T16:22:26Z" duration-ms="8882" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createContact(java.lang.String, java.lang.String)[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:25Z" name="createContact" data-provider="getAllDataFromExcel" finished-at="2021-09-24T16:22:40Z" duration-ms="14340" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[First Name 4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Last Name 4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+        <test-method signature="createContact(java.lang.String, java.lang.String)[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:25Z" name="createContact" data-provider="getAllDataFromExcel" finished-at="2021-09-24T16:22:39Z" duration-ms="13500" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[First Name 5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Last Name 5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+        <test-method signature="createContact(java.lang.String, java.lang.String)[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:26Z" name="createContact" data-provider="getAllDataFromExcel" finished-at="2021-09-24T16:22:40Z" duration-ms="14393" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[First Name 6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Last Name 6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:39Z" name="configAM" finished-at="2021-09-24T16:22:41Z" duration-ms="1815" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:40Z" name="configAM" finished-at="2021-09-24T16:22:41Z" duration-ms="1148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:40Z" name="configAM" finished-at="2021-09-24T16:22:41Z" duration-ms="838" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:41Z" name="configBM" finished-at="2021-09-24T16:22:50Z" duration-ms="8902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:41Z" name="configBM" finished-at="2021-09-24T16:22:51Z" duration-ms="10060" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:41Z" name="configBM" finished-at="2021-09-24T16:22:49Z" duration-ms="8586" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createContact(java.lang.String, java.lang.String)[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:49Z" name="createContact" data-provider="getAllDataFromExcel" finished-at="2021-09-24T16:23:04Z" duration-ms="14629" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[First Name 9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Last Name 9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+        <test-method signature="createContact(java.lang.String, java.lang.String)[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:50Z" name="createContact" data-provider="getAllDataFromExcel" finished-at="2021-09-24T16:23:04Z" duration-ms="14443" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[First Name 7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Last Name 7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+        <test-method signature="createContact(java.lang.String, java.lang.String)[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:22:51Z" name="createContact" data-provider="getAllDataFromExcel" finished-at="2021-09-24T16:23:05Z" duration-ms="13903" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[First Name 8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Last Name 8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:23:04Z" name="configAM" finished-at="2021-09-24T16:23:05Z" duration-ms="1059" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:23:04Z" name="configAM" finished-at="2021-09-24T16:23:05Z" duration-ms="996" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:23:05Z" name="configAM" finished-at="2021-09-24T16:23:06Z" duration-ms="780" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:23:05Z" name="configBM" finished-at="2021-09-24T16:23:09Z" duration-ms="3860" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createContact(java.lang.String, java.lang.String)[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:23:09Z" name="createContact" data-provider="getAllDataFromExcel" finished-at="2021-09-24T16:23:16Z" duration-ms="6703" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[First Name 10]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Last Name 10]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:dataProvidersParallel.Script@78e94dcf]" started-at="2021-09-24T16:23:16Z" name="configAM" finished-at="2021-09-24T16:23:16Z" duration-ms="696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+      </class> <!-- dataProvidersParallel.Script -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,63 @@
+https://www.youtube.com/watch?v=TZq64ez7Iqo&list=PL9ok7C7Yn9A_JZFMrhrgEwfqQGiuyvSkB&index=21
+
+The main points we are covering 
+1. How to control the script execution from excel? Like invocation count
+2. How to disable the script in runtime from excel? and etc...
+   
+Steps to overcome above problem
+ 1. Create a Runner class (Script class) and add all annotations of test-ng
+ 	NOTE: i. Number of @Test methods in Runner class should be equal to the number of methods listed in excel
+		 ii. Name of each methods of @Test should be same as the names of methods listed in excel
+		  
+ 2. Create a class ListenerImp and that class should implement ITestListener and ISuiteListener classes
+ 	and provide implementation
+ 3. Create a class ReadDataFromExcel which will have a method to read all data from excel and store all the data of excel into List
+ 4. Create one more class MethodInterceptor and implement IMethodInterceptor interface and provide the implementation
+ 	for intercept() method
+ 	
+ 5. Add the following code in intercept()
+ 
+ 	@Override
+	public List<IMethodInstance> intercept(List<IMethodInstance> methods, ITestContext arg1) {
+		
+		//return null; return null if you don't want to disable any scripts
+		
+		List<IMethodInstance> result = new ArrayList<IMethodInstance>(); //This List will store which all scripts to be executed in runtime
+		
+		List<Map<String, String>> list = ReadDataFromExcel.readDataFromExcel();
+		
+		
+		for(int i=0; i<methods.size();i++)
+		{
+			for(int j=0;j<list.size();j++)
+			{
+				if(methods.get(i).getMethod().getMethodName().equalsIgnoreCase(list.get(j).get("TestCaseName")))
+				{
+					//Set Invocation count
+					//methods.get(i).getMethod().setInvocationCount(Integer.parseInt(list.get(j).get("Invocation count")));
+					
+					//Enable those scripts which are defined as Yes in excel
+					if(list.get(j).get("Execute?").equalsIgnoreCase("Yes"))
+					{
+						result.add(methods.get(i)); //add the script
+					}
+					
+				}
+			}
+		}
+		return result;
+	}
+
+ 6. Add the following code in testng.xml between <suite> and <test> to add this intercept class in <listener>
+ 	<suite name="Suite">
+		<listeners>
+			<listener class-name="listeners_4_ControllingScript.MethodInterceptor" />
+		</listeners>
+		<test thread-count="5" name="Test">
+			<classes>
+				<class name="listeners_4_ControllingScript.Runner" />
+			</classes>
+		</test>
+	</suite>
+ ____________________________________________________________________________________________________________
+ 

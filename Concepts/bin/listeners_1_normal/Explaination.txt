@@ -1,0 +1,3 @@
+1. 1st we need to create a class and that class should implement ITestListener and ISuiteListener(SuiteListener is optional)
+2. Implement all the methods of those interfaces
+3. Add this annotation for every script before class @Listeners(package.subpackage.ListenerImp.class)

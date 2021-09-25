@@ -1,0 +1,41 @@
+https://www.youtube.com/watch?v=TZq64ez7Iqo&list=PL9ok7C7Yn9A_JZFMrhrgEwfqQGiuyvSkB&index=21
+
+The main points we are covering how to disable a script in runtime
+
+1. Earlier if we want to disable the script, we used to disable by using enabled="false" in every @Test annotation.
+   But this is not the good approach
+   
+ Steps to overcome above problem
+ 1. Create a Runner class (Script class) and add all annotations of test ng
+ 2. Create a class ListenerImp and that class should implement ITestListener and ISuiteListener classes
+ 3. Create one more class MethodInterceptor and implement IMethodInterceptor interface and provide the implementation
+ 	for intercept() method
+ 	
+ 4. Add the following code in intercept()
+ 
+ 	@Override
+	public List<IMethodInstance> intercept(List<IMethodInstance> method, ITestContext arg1) 
+	{
+		//This method accept List of all @Test methods which will run during run time
+		
+		//Storing all those methods in ArrayList
+		List<IMethodInstance> ins = new ArrayList<IMethodInstance>();
+		ins.add(method.get(0)); //Fetching one of those methods and storing in ArrayList
+		
+		return ins;
+		//return null; return null if you son't want to disable any scripts
+	}
+
+ 3. Add the following code in testng.xml between <suite> and <test> to add this intercept class in <listener>
+ 	<suite name="Suite">
+		<listeners>
+			<listener class-name="listeners_3_disablingScript.MethodInterceptor" />
+		</listeners>
+		<test thread-count="5" name="Test">
+			<classes>
+				<class name="listeners_3_disablingScript.Runner" />
+			</classes>
+		</test>
+	</suite>
+ ____________________________________________________________________________________________________________
+ 

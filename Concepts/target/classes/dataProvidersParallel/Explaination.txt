@@ -1,0 +1,15 @@
+1. In Parallel data-providers each data from data-providers require separate browsers to execute
+2. Therefore launch browser code should be written inside @BeforeMethod. 
+3. We get exception if launch code is written in @BeforeClass
+4. To achieve parallel Data-providers we should pass attribute "parallel=true" to data-provider @Dataprovider annotation
+   Ex: @Dataprovider(parallel=true)
+5. We need to add parallel="methods" attribute for <test> tag in testNg.xml
+   Ex: <test thread-count="5" name="Test" parallel="methods">
+   NOTE: If we only add parallel="methods" in <test> tag, it will open 1 browser for each data from Data-provider
+		  i.e. if the data provider is providing 100 data from excel file and then it will open 100 browsers at a shot
+		  which will lead to system or browser crash. To avoid thi we need to go for step 6.
+		  
+6. To control the maximum number of browser to be opened at a time, we need to add "data-provider-thread-count="3"" in <suite> tag
+   Ex: <suite name="Suite" data-provider-thread-count="3">
+   The above code will open only 3 browsers for 1st 3 sets of data and goes no. But it will not open 100 browsers for all
+   100 data of excel

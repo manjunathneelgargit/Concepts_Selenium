@@ -1,0 +1,84 @@
+https://www.youtube.com/watch?v=TZq64ez7Iqo&list=PL9ok7C7Yn9A_JZFMrhrgEwfqQGiuyvSkB&index=21
+
+The main points we are covering 
+1. How to control the script execution from excel? Like invocation count
+2. How to disable the script in runtime from excel? and etc...
+3. How to Rerun a script automatically which is failed for defined number of times
+   
+Steps to overcome above problem
+ 1. Create a Runner class (Script class) and add all annotations of test-ng
+ 	NOTE: i. Number of @Test methods in Runner class should be equal to the number of methods listed in excel
+		 ii. Name of each methods of @Test should be same as the names of methods listed in excel
+		  
+ 2. Create a class ListenerImp and that class should implement ITestListener and ISuiteListener classes
+ 	and provide implementation
+ 3. Create a class ReadDataFromExcel which will have a method to read all data from excel and store all the data of excel into List
+ 4. Create one more class AnnotationTransformer and implement IAnnotationTransformer interface and provide the implementation
+ 	for transform() method
+ 5. Add the following code in transform()
+ 
+ 	@Override
+	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) 
+	{
+		List<Map<String, String>> list = ReadDataFromExcel.readDataFromExcel();
+		
+		for(int i=0;i<list.size();i++)
+		{
+			if(testMethod.getName().equalsIgnoreCase(list.get(i).get("TestCaseName")))
+			{
+				if(list.get(i).get("Execute?").equalsIgnoreCase("No"))
+				{
+					annotation.setEnabled(false);// it is like @Test(enabled="false") 
+				}
+				else
+				{
+					//Set Invocation count
+					//methods.get(i).getMethod().setInvocationCount(Integer.parseInt(list.get(j).get("Invocation count")));
+					annotation.setRetryAnalyzer(Retry.class); //Setting Retry analyzer
+				}
+			}
+		}
+	}
+
+ 6. Create a call Retry and implements IRetryAnalyzer and provide implementation to retry() method as below
+ 	
+ 	public class Retry implements IRetryAnalyzer
+	{
+		//Whenever a test is failed then this method will be called
+		//If this method returns true, then the failed method will be run
+		//By default this method will return false, indicating no need to run failed method
+		
+		int counter = 0;
+		int limit = 1;
+		
+		@Override
+		public boolean retry(ITestResult result) 
+		{
+			if(counter<limit)
+			{
+				counter++;
+				return true;
+			}
+			else 
+			{
+				return false;
+			}
+		}
+ 	}
+ 
+ 
+ 6. Add the following code in testng.xml between <suite> and <test> to add this intercept class in <listener>
+
+	<suite name="Suite">
+		<listeners>
+			<listener class-name="listeners_5_ControllingScript.AnnotationTransformer" />
+		</listeners>
+		<test thread-count="5" name="Test">
+			<classes>
+				<class name="listeners_5_ControllingScript.Runner" />
+			</classes>
+		</test>
+	</suite>
+
+ ____________________________________________________________________________________________________________
+ 
