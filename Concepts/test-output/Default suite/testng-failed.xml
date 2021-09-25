@@ -3,16 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="dataProvidersParallel.Script">
+      <class name="extentReports_In_Framework_Listeners_Scrnsht.Script">
         <methods>
-          <include name="configBM"/>
-          <include name="createContact" invocation-numbers="0"/>
           <include name="configAM"/>
-          <include name="configBS"/>
+          <include name="deleteContact"/>
+          <include name="configBM"/>
+          <include name="createContact"/>
           <include name="configBC"/>
           <include name="configAC"/>
+          <include name="updateContact"/>
         </methods>
-      </class> <!-- dataProvidersParallel.Script -->
+      </class> <!-- extentReports_In_Framework_Listeners_Scrnsht.Script -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

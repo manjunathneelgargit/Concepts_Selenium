@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="extentReports_In_Framework_Listeners_Scrnsht.ListenerImp"/>
+  </listeners>
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="dataProviders.ParallelDataProviders">
+      <class name="extentReports_In_Framework_Listeners_Scrnsht.Script">
         <methods>
-          <include name="TestCase"/>
           <include name="configAM"/>
           <include name="configBM"/>
+          <include name="configBC"/>
+          <include name="configAC"/>
+          <include name="updateContact"/>
         </methods>
-      </class> <!-- dataProviders.ParallelDataProviders -->
+      </class> <!-- extentReports_In_Framework_Listeners_Scrnsht.Script -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

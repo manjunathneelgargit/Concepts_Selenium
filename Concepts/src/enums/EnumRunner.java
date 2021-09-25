@@ -15,7 +15,5 @@ public class EnumRunner
 		{
 			System.out.println("Actual Val => " + actualVal);
 		}
-
 	}
-
 }

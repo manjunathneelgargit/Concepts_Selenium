@@ -1,0 +1,38 @@
+https://www.youtube.com/watch?v=FIHWcmE5LRE&list=PL9ok7C7Yn9A_JZFMrhrgEwfqQGiuyvSkB&index=23
+
+1. Create a separate class ExtentConfig for configuring the extent report
+2. Create a method extentConfig() and write all configuration code in this method. Call this method in @BeforeSuite annotation
+3. Create a method createTest() and write code. 
+   Earlier we used to use createTest() in every scripts to create an entry of a script in Extent report html file. This is not a good practice
+   We will overcome this problem by calling the same createTest() method in @BeforeMethod annotation of Base class as follows
+   
+   @BeforeMethod 
+   public void configBM(Method m) 
+   { 
+		ExtentConfig.createTest(m.getName());
+		System.out.println("Before Method"); 
+   }
+   
+4. Create a method flushExtentReport() and write flush code. This method will help to push all the report to html file. 
+   Call this method in @AfterSuite annotation
+   
+5. Create a thread safety logic for ExtentTest class object in ExtentConfig class to avoid multiple blank entries in Reports
+
+6. Make use of extent logs with the help of ExtentTest object reference variable which can be provided by get() of ExtentTest
+   thread safety method in every script where ever it is needed
+	
+7. To hide the implementation or listing of too many methods while calling extent log methods, we will create one more call
+   ExtentLogger and will create 3 methods pass(), fail() and skip() and give the implementation.
+
+8. Now you can call pass(), fail() and skip() methods directly from ExtentLogger class
+
+9. And also we can do some tasks once after the script is executed. This code will be written inside @AfterMethod as follows
+	
+	@AfterMethod 
+	public void configAM(Method m, ITestResult result) 
+	{ 
+		if(result.isSuccess())
+		{
+			System.out.println(m.getName()+" Script Executed Successfully");
+		} 
+	} 

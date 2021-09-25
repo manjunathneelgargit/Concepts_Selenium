@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="dataProvidersParallel.Script"/>
+      <class name="extentReports_In_Framework_Listeners_Scrnsht.Script"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

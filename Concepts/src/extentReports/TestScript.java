@@ -2,12 +2,12 @@ package extentReports;
 
 import org.testng.annotations.Test;
 
-public class Script extends Base
+public class TestScript extends Base
 {
 	@Test
-	public void testScript()
+	public void testCase1()
 	{
 		ExtentConfig.createTest(getClass().getName());
-		ExtentConfig.test.pass("Test Script is passed");
+		ExtentConfig.test.pass("Test Case 1 is passed ");
 	}
 }

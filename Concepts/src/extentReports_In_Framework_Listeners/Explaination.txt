@@ -1,0 +1,93 @@
+https://www.youtube.com/watch?v=FIHWcmE5LRE&list=PL9ok7C7Yn9A_JZFMrhrgEwfqQGiuyvSkB&index=23
+Time 11:30
+
+1. Create ListenerImp class which implements ITestListener and ISuiteListener and provide implementation for all unimplemented methods
+2. Create a separate class ExtentConfig for configuring the extent report
+3. Create a method extentConfig() and write all configuration code in this method.
+   Earlier we used to call this method in @BeforeSuite annotation. Which is not a good practice
+   Add this code in onStart() method of ListenerImp class as follows
+   
+   @Override
+	public void onStart(ISuite arg0) {
+		ExtentConfig.flushExtentReport();
+	}
+   
+3. Create a method createTest() in ExtentConfig class and write code. 
+		  i. Earlier we used to use createTest() in every scripts to create an entry of a script in Extent report html file. This is not a good practice
+		 ii. We will overcome this problem by calling the same createTest() method in @BeforeMethod annotation of Base class as follows
+   
+			   @BeforeMethod 
+			   public void configBM(Method m) 
+			   { 
+					ExtentConfig.createTest(m.getName());
+			   }
+	   
+	   			NOTE: Again this not a good practice. This is still can be over come by following step
+	   
+ 		iii. To overcome the above problem, the createTest() can be writtent inside onTestStart() of ListenerImp class as below
+		 		//This is like @BeforeMethod
+				@Override
+				public void onTestStart(ITestResult result) 
+				{
+					ExtentConfig.createTest(result.getMethod().getMethodName());
+				} 
+   
+4. Create a method flushExtentReport() and write flush code. This method will help to push all the report to html file. 
+   Earlier we used to call this method in @AfterSuite annotation, which is not a good practice
+   Add this code in onFinish() method of ListenerImp class as follows
+   
+   @Override
+	public void onFinish(ISuite arg0) {
+		ExtentConfig.flushExtentReport();
+	}
+   
+5. Create a thread safety logic for ExtentTest class object in ExtentConfig class to avoid multiple blank entries in Reports
+
+6. Make use of extent logs with the help of ExtentTest object reference variable which can be provided by get() of ExtentTest
+   thread safety method in every script where ever it is needed
+	
+7. To hide the implementation or listing of too many methods while calling extent log methods, we will create one more call
+   ExtentLogger and will create 3 methods pass(), fail() and skip() and give the implementation.
+
+8. Now you can call pass(), fail() and skip() methods directly from ExtentLogger class
+
+9. And also we can do some tasks once after the script is executed. This code will be written inside @AfterMethod as follows
+	
+	@AfterMethod 
+	public void configAM(Method m, ITestResult result) 
+	{ 
+		if(result.isSuccess())
+		{
+			System.out.println(m.getName()+" Script Executed Successfully");
+		} 
+	} 
+	NOTE: This is not a good practice, this can be over come by the following code in ListenerImp class
+	
+	@Override
+	public void onTestSuccess(ITestResult result) 
+	{
+		ExtentLogger.pass(result.getMethod().getMethodName()+" script is PASSED");
+	}
+		
+	@Override
+	public void onTestFailure(ITestResult result) 
+	{
+		ExtentLogger.fail(result.getMethod().getMethodName()+" script is FAILED");
+	}
+	
+	@Override
+	public void onTestSkipped(ITestResult result) 
+	{
+		ExtentLogger.skip(result.getMethod().getMethodName()+" script is SKIPPED");
+	}
+	
+5. After configuring all this, we need to add <listeners> tag in testNg.xml file. Without this tag, the code will not work
+	Code of testNg.xml file
+	
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+1. Create a separate class ExtentConfig for configuring the extent report
+2. Create a method extentConfig() and write all configuration code in this method. Call this method in @BeforeSuite annotation
+3. Create a method createTest() and write code. This method will be called every script to create a report for every script
+4. Create a method flushExtentReport() and write flush code. This method will help to push all the report to html file. Call this
+   method in @AfterSuite annotation
