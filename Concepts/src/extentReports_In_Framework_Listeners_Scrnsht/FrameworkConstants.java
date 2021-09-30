@@ -10,7 +10,6 @@ public final class FrameworkConstants
 		return extentConfigPropPath;
 	}
 	
-	
 	public static String getExtentFilePath() 
 	{
 		//Override extent report html file => Yes -> It will override the old file with new file

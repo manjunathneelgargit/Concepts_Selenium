@@ -31,9 +31,12 @@ public class MethodInterceptor implements IMethodInterceptor
 					//Enable those scripts which are defined as Yes in excel
 					if(list.get(j).get("Execute?").equalsIgnoreCase("Yes"))
 					{
-						//Set Invocation count
+						//Set method description
 						methods.get(i).getMethod().setDescription(list.get(j).get("Description"));
+						
+						//Set Invocation count
 						methods.get(i).getMethod().setInvocationCount(Integer.parseInt(list.get(j).get("Invocation count")));
+												
 						result.add(methods.get(i)); //add the script
 					}
 				}
