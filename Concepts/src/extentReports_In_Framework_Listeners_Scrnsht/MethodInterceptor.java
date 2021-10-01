@@ -21,7 +21,7 @@ public class MethodInterceptor implements IMethodInterceptor
 		List<IMethodInstance> result = new ArrayList<IMethodInstance>(); //This List will store which all scripts to be executed in runtime
 
 		List<Map<String, String>> list = FileUtils.readDataFromExcel();
-		System.out.println(list);
+		
 		for(int i=0; i<methods.size();i++)
 		{
 			for(int j=0;j<list.size();j++)
