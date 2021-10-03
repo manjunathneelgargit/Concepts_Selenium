@@ -1,0 +1,32 @@
+https://www.youtube.com/watch?v=_-R_cQikPTQ&list=PL9ok7C7Yn9A_JZFMrhrgEwfqQGiuyvSkB&index=35
+
+1. Create a class FrameworkException which extends RunTimeExceptions and Add two constructors as given below
+
+	public FrameworkExceptions(String message) {
+	
+		super(message);
+	}
+	
+	public FrameworkExceptions(String message, Throwable cause) {
+	
+		super(message, cause);
+	}
+	
+3. Create a class PropertyFileUsageException which extends FrameworkExceptions and Add two constructors as given below
+	
+	public PropertyFileUsageException(String message) {
+		super(message);
+	}
+	
+	public PropertyFileUsageException(String message, Throwable cause) {
+		super(message, cause);
+	}
+	
+4. throw the custom exception where ever is needed inside a catch block
+
+	catch(FileNotFoundException e){
+			throw new PropertyFileUsageException("The properties file you are trying to read is not found ");
+		}
+	catch(IOException e) {
+			throw new PropertyFileUsageException("Some IO exception has happened while loading FileInputStream object into Properties object");
+		} 
