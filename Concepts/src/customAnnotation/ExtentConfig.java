@@ -63,11 +63,18 @@ public final class ExtentConfig
 		}
 	}
 	
+	//To get the authors of script in runtime and add them to extent report
 	public static void authors(String[] authors) {
 		for (String athr : authors) {
 			getExtentTest().assignAuthor(athr);
 		}
 	}
 	
+	//To get the categories of script in runtime and add them to extent report
+	public static void categories(CategoryType[] categories) {
+		for (CategoryType category : categories) {
+			getExtentTest().assignCategory(category.toString());
+		}
+	}
 	
 }

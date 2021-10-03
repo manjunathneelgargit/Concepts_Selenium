@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\ALL SELENIUM\gitRepositories\Concepts\src\extentReports_In_Framework_Listeners_Scrnsht\testng.xml</span>
+                    <span>D:\ALL SELENIUM\gitRepositories\Concepts\src\customAnnotation\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="extentReports_In_Framework_Listeners_Scrnsht.Script" class="method navigator-link" hash-for-method="updateContact">updateContact</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="customAnnotation.Script" class="method navigator-link" hash-for-method="updateContact">updateContact</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -116,12 +116,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="extentReports_In_Framework_Listeners_Scrnsht.Script" class="method navigator-link" hash-for-method="createContact">createContact</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="customAnnotation.Script" class="method navigator-link" hash-for-method="createContact">createContact</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="extentReports_In_Framework_Listeners_Scrnsht.Script" class="method navigator-link" hash-for-method="deleteContact">deleteContact</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="customAnnotation.Script" class="method navigator-link" hash-for-method="deleteContact">deleteContact</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -139,7 +139,7 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">extentReports_In_Framework_Listeners_Scrnsht.Script</span>
+              <span class="class-name">customAnnotation.Script</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -148,7 +148,7 @@
                   </a> <!-- updateContact -->
                   <span class="method-name">updateContact</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at extentReports_In_Framework_Listeners_Scrnsht.Script.updateContact(Script.java:19)
+	at customAnnotation.Script.updateContact(Script.java:21)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
@@ -163,7 +163,7 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">extentReports_In_Framework_Listeners_Scrnsht.Script</span>
+              <span class="class-name">customAnnotation.Script</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -189,7 +189,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\ALL SELENIUM\gitRepositories\Concepts\src\extentReports_In_Framework_Listeners_Scrnsht\testng.xml</span>
+            <span class="header-content">D:\ALL SELENIUM\gitRepositories\Concepts\src\customAnnotation\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -197,12 +197,12 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;extentReports_In_Framework_Listeners_Scrnsht.ListenerImp&quot;/&gt;
-    &lt;listener class-name=&quot;extentReports_In_Framework_Listeners_Scrnsht.MethodInterceptor&quot;/&gt;
+    &lt;listener class-name=&quot;customAnnotation.ListenerImp&quot;/&gt;
+    &lt;listener class-name=&quot;customAnnotation.MethodInterceptor&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;extentReports_In_Framework_Listeners_Scrnsht.Script&quot;/&gt;
+      &lt;class name=&quot;customAnnotation.Script&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -245,21 +245,21 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'createContact')
-data.setCell(0, 2, 'extentReports_In_Framework_Listeners_Scrnsht.Script')
-data.setCell(0, 3, 23);
+data.setCell(0, 2, 'customAnnotation.Script')
+data.setCell(0, 3, 26);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'updateContact')
-data.setCell(1, 2, 'extentReports_In_Framework_Listeners_Scrnsht.Script')
-data.setCell(1, 3, 3);
+data.setCell(1, 2, 'customAnnotation.Script')
+data.setCell(1, 3, 6);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'deleteContact')
-data.setCell(2, 2, 'extentReports_In_Framework_Listeners_Scrnsht.Script')
+data.setCell(2, 2, 'customAnnotation.Script')
 data.setCell(2, 3, 2);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 ms</span>
+              <span class="suite-total-time">Total running time: 34 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -285,7 +285,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">extentReports_In_Framework_Listeners_Scrnsht.Script</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">customAnnotation.Script</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">configBC</span>
                 <span class="method-start">0 ms</span>
@@ -304,33 +304,33 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createContact</span>
-                <span class="method-start">3986 ms</span>
+                <span class="method-start">4332 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">configAM(public void extentReports_In_Framework_Listeners_Scrnsht.Script.createContact(), [TestResult name=cr...)</span>
-                <span class="method-start">4013 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">deleteContact</span>
-                <span class="method-start">4283 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">configAM(public void extentReports_In_Framework_Listeners_Scrnsht.Script.deleteContact(), [TestResult name=de...)</span>
-                <span class="method-start">4287 ms</span>
+                <span class="method-name">configAM(public void customAnnotation.Script.createContact(), [TestResult name=createContact status=SUCCESS m...)</span>
+                <span class="method-start">4361 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">updateContact</span>
-                <span class="method-start">4806 ms</span>
+                <span class="method-start">4783 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteContact</span>
+                <span class="method-start">4828 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">configAM(public void extentReports_In_Framework_Listeners_Scrnsht.Script.updateContact(), [TestResult name=up...)</span>
-                <span class="method-start">5382 ms</span>
+                <span class="method-name">configAM(public void customAnnotation.Script.deleteContact(), [TestResult name=deleteContact status=SUCCESS m...)</span>
+                <span class="method-start">4831 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM(public void customAnnotation.Script.updateContact(), [TestResult name=updateContact status=FAILURE m...)</span>
+                <span class="method-start">5375 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">configAC</span>
-                <span class="method-start">6211 ms</span>
+                <span class="method-start">6166 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

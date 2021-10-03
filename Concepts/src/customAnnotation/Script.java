@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class Script extends Base
 {
-	@Authors(authors = { "Manjunath" })
+	@Authors(authors = { "Manjunath" }, category = {CategoryType.REGRESSION})
 	@Test
 	public void createContact()
 	{
@@ -13,7 +13,7 @@ public class Script extends Base
 		ExtentLogger.pass("This is Create Contact Script"); //This is extent log
 	}
 	
-	@Authors(authors = { "Akash" })
+	@Authors(authors = { "Akash" }, category = {CategoryType.SMOKE})
 	@Test
 	public void updateContact()
 	{
@@ -22,7 +22,7 @@ public class Script extends Base
 		ExtentLogger.pass("This is Update Contact Script"); //This is extent log
 	}
 	
-	@Authors(authors = { "Abhi" })
+	@Authors(authors = { "Abhi" }, category = {CategoryType.UAT})
 	@Test
 	public void deleteContact()
 	{

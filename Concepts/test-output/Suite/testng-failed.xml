@@ -2,20 +2,20 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
-    <listener class-name="extentReports_In_Framework_Listeners_Scrnsht.ListenerImp"/>
-    <listener class-name="extentReports_In_Framework_Listeners_Scrnsht.MethodInterceptor"/>
+    <listener class-name="customAnnotation.ListenerImp"/>
+    <listener class-name="customAnnotation.MethodInterceptor"/>
   </listeners>
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="extentReports_In_Framework_Listeners_Scrnsht.Script">
+      <class name="customAnnotation.Script">
         <methods>
-          <include name="configAM"/>
           <include name="configBM"/>
+          <include name="configAM"/>
           <include name="configBC"/>
           <include name="configAC"/>
           <include name="updateContact"/>
         </methods>
-      </class> <!-- extentReports_In_Framework_Listeners_Scrnsht.Script -->
+      </class> <!-- customAnnotation.Script -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

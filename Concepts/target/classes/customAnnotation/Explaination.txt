@@ -1,35 +1,58 @@
 https://www.youtube.com/watch?v=8zD2ASUdLDg&list=PL9ok7C7Yn9A_JZFMrhrgEwfqQGiuyvSkB&index=30
 
-Here, we are creating an annotation to add authors to evry script
+Here, we are creating an annotation to add authors and Categories to every script
 
-1. Create a Annotation call (not a simple java class). While creating an annotation, please select 
+1. Create a Enum CategoryType and add the following code
+
+	public enum CategoryType {
+		SMOKE,
+		REGRESSION,
+		SANITY,
+		UAT;
+	}
+
+
+2. Create a Annotation call (not a simple java class). While creating an annotation, please select 
 	Add @Retention check box and Select Runtime radio button and
 	Select Add @Target check box and Select Method check box
+	
 
-2. Add the following code 
+3. Add the following code in Authors annotation class
+
 	@Retention(RUNTIME)
 	@Target(METHOD)
 	public @interface Authors {
 	
 		public String[] authors(); //Add this line of code
+		public CategoryType[] category(); //To add categories
 	}
 
-3. Add @Authors annotation at the top of every @Test annotation and add the author names as shown below
-	@Authors(authors = { "Manjunath" })
+4. Add @Authors annotation at the top of every @Test annotation and add the author names as shown below
+
+	@Authors(authors = { "Manjunath" }, category = {CategoryType.REGRESSION, CategoryType.SMOKE})
 	@Test 
 	public void testCase1() {
 
 		System.out.println("Test Case 1");
 	}
 	
-4. Add the following code in ExtentConfig class
+5. Add the following code(methods) in ExtentConfig class
+
+	//To get the authors of script in runtime and add them to extent report
 	public static void authors(String[] authors) {
 		for (String athr : authors) {
 			getExtentTest().assignAuthor(athr);
 		}
 	}
 	
-5. Add the following code in ListenerImp class in onStart()
+	//To get the categories of script in runtime and add them to extent report
+	public static void categories(CategoryType[] categories) {
+		for (CategoryType category : categories) {
+			getExtentTest().assignCategory(category.toString());
+		}
+	}
+	
+6. Add the following code in ListenerImp class in onStart()
 	
 	//Get the author assigned for respective @Test and add the authors in extent report
 	String[] authors = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(Authors.class).authors();
@@ -46,6 +69,10 @@ Here, we are creating an annotation to add authors to evry script
 		//Get the author assigned for respective @Test and add the authors in extent report
 		String[] authors = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(Authors.class).authors();
 		ExtentConfig.authors(authors);
+		
+		//Get the category assigned for respective @Test and add the category in extent report
+		CategoryType[] categories = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(Authors.class).category();
+		ExtentConfig.categories(categories);
 	}
 	
 	

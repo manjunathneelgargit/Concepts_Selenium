@@ -2,68 +2,48 @@
 <testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-25T15:36:46Z" name="Suite" finished-at="2021-09-25T15:36:52Z" duration-ms="6669">
+  <suite started-at="2021-10-03T14:59:21Z" name="Suite" finished-at="2021-10-03T14:59:28Z" duration-ms="6762">
     <groups>
     </groups>
-    <test started-at="2021-09-25T15:36:46Z" name="Test" finished-at="2021-09-25T15:36:52Z" duration-ms="6669">
-      <class name="extentReports_In_Framework_Listeners_Scrnsht.Script">
-        <test-method is-config="true" signature="configBC()[pri:0, instance:extentReports_In_Framework_Listeners_Scrnsht.Script@233fe9b6]" started-at="2021-09-25T15:36:46Z" name="configBC" finished-at="2021-09-25T15:36:46Z" duration-ms="6" status="PASS">
+    <test started-at="2021-10-03T14:59:21Z" name="Test" finished-at="2021-10-03T14:59:28Z" duration-ms="6762">
+      <class name="customAnnotation.Script">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:customAnnotation.Script@3c72f59f]" started-at="2021-10-03T14:59:22Z" name="configBC" finished-at="2021-10-03T14:59:22Z" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:extentReports_In_Framework_Listeners_Scrnsht.Script@233fe9b6]" started-at="2021-09-25T15:36:46Z" name="configBM" finished-at="2021-09-25T15:36:51Z" duration-ms="4795" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:customAnnotation.Script@3c72f59f]" started-at="2021-10-03T14:59:22Z" name="configBM" finished-at="2021-10-03T14:59:27Z" duration-ms="4772" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:extentReports_In_Framework_Listeners_Scrnsht.Script@233fe9b6]" started-at="2021-09-25T15:36:46Z" name="configBM" finished-at="2021-09-25T15:36:50Z" duration-ms="4272" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:customAnnotation.Script@3c72f59f]" started-at="2021-10-03T14:59:22Z" name="configBM" finished-at="2021-10-03T14:59:26Z" duration-ms="4321" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:extentReports_In_Framework_Listeners_Scrnsht.Script@233fe9b6]" started-at="2021-09-25T15:36:46Z" name="configBM" finished-at="2021-09-25T15:36:50Z" duration-ms="3975" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:customAnnotation.Script@3c72f59f]" started-at="2021-10-03T14:59:22Z" name="configBM" finished-at="2021-10-03T14:59:27Z" duration-ms="4817" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="createContact()[pri:0, instance:extentReports_In_Framework_Listeners_Scrnsht.Script@233fe9b6]" started-at="2021-09-25T15:36:50Z" name="createContact" description="Create Contact Description" finished-at="2021-09-25T15:36:50Z" duration-ms="23" status="PASS">
+        <test-method signature="createContact()[pri:0, instance:customAnnotation.Script@3c72f59f]" started-at="2021-10-03T14:59:26Z" name="createContact" description="Create Contact Description" finished-at="2021-10-03T14:59:26Z" duration-ms="26" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContact -->
-        <test-method is-config="true" signature="configAM(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:extentReports_In_Framework_Listeners_Scrnsht.Script@233fe9b6]" started-at="2021-09-25T15:36:50Z" name="configAM" finished-at="2021-09-25T15:36:52Z" duration-ms="1488" status="PASS">
+        <test-method is-config="true" signature="configAM(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:customAnnotation.Script@3c72f59f]" started-at="2021-10-03T14:59:26Z" name="configAM" finished-at="2021-10-03T14:59:28Z" duration-ms="1414" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void extentReports_In_Framework_Listeners_Scrnsht.Script.createContact()]]>
+                <![CDATA[public void customAnnotation.Script.createContact()]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=createContact status=SUCCESS method=Script.createContact()[pri:0, instance:extentReports_In_Framework_Listeners_Scrnsht.Script@233fe9b6] output={null}]]]>
+                <![CDATA[[TestResult name=createContact status=SUCCESS method=Script.createContact()[pri:0, instance:customAnnotation.Script@3c72f59f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method signature="deleteContact()[pri:0, instance:extentReports_In_Framework_Listeners_Scrnsht.Script@233fe9b6]" started-at="2021-09-25T15:36:50Z" name="deleteContact" description="Delete Contact Description" finished-at="2021-09-25T15:36:50Z" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteContact -->
-        <test-method is-config="true" signature="configAM(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:extentReports_In_Framework_Listeners_Scrnsht.Script@233fe9b6]" started-at="2021-09-25T15:36:50Z" name="configAM" finished-at="2021-09-25T15:36:52Z" duration-ms="1217" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void extentReports_In_Framework_Listeners_Scrnsht.Script.deleteContact()]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=deleteContact status=SUCCESS method=Script.deleteContact()[pri:0, instance:extentReports_In_Framework_Listeners_Scrnsht.Script@233fe9b6] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- configAM -->
-        <test-method signature="updateContact()[pri:0, instance:extentReports_In_Framework_Listeners_Scrnsht.Script@233fe9b6]" started-at="2021-09-25T15:36:51Z" name="updateContact" description="Update Contact Description" finished-at="2021-09-25T15:36:51Z" duration-ms="3" status="FAIL">
+        <test-method signature="updateContact()[pri:0, instance:customAnnotation.Script@3c72f59f]" started-at="2021-10-03T14:59:27Z" name="updateContact" description="Update Contact Description" finished-at="2021-10-03T14:59:27Z" duration-ms="6" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -74,7 +54,7 @@ at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertTrue(Assert.java:44)
 at org.testng.Assert.assertTrue(Assert.java:54)
-at extentReports_In_Framework_Listeners_Scrnsht.Script.updateContact(Script.java:19)
+at customAnnotation.Script.updateContact(Script.java:21)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -94,27 +74,47 @@ at java.base/java.lang.Thread.run(Thread.java:832)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateContact -->
-        <test-method is-config="true" signature="configAM(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:extentReports_In_Framework_Listeners_Scrnsht.Script@233fe9b6]" started-at="2021-09-25T15:36:52Z" name="configAM" finished-at="2021-09-25T15:36:52Z" duration-ms="829" status="PASS">
+        <test-method signature="deleteContact()[pri:0, instance:customAnnotation.Script@3c72f59f]" started-at="2021-10-03T14:59:27Z" name="deleteContact" description="Delete Contact Description" finished-at="2021-10-03T14:59:27Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteContact -->
+        <test-method is-config="true" signature="configAM(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:customAnnotation.Script@3c72f59f]" started-at="2021-10-03T14:59:27Z" name="configAM" finished-at="2021-10-03T14:59:28Z" duration-ms="917" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void extentReports_In_Framework_Listeners_Scrnsht.Script.updateContact()]]>
+                <![CDATA[public void customAnnotation.Script.deleteContact()]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=updateContact status=FAILURE method=Script.updateContact()[pri:0, instance:extentReports_In_Framework_Listeners_Scrnsht.Script@233fe9b6] output={null}]]]>
+                <![CDATA[[TestResult name=deleteContact status=SUCCESS method=Script.deleteContact()[pri:0, instance:customAnnotation.Script@3c72f59f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:extentReports_In_Framework_Listeners_Scrnsht.Script@233fe9b6]" started-at="2021-09-25T15:36:52Z" name="configAC" finished-at="2021-09-25T15:36:52Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="configAM(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:customAnnotation.Script@3c72f59f]" started-at="2021-10-03T14:59:27Z" name="configAM" finished-at="2021-10-03T14:59:28Z" duration-ms="791" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void customAnnotation.Script.updateContact()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=updateContact status=FAILURE method=Script.updateContact()[pri:0, instance:customAnnotation.Script@3c72f59f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:customAnnotation.Script@3c72f59f]" started-at="2021-10-03T14:59:28Z" name="configAC" finished-at="2021-10-03T14:59:28Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-      </class> <!-- extentReports_In_Framework_Listeners_Scrnsht.Script -->
+      </class> <!-- customAnnotation.Script -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
