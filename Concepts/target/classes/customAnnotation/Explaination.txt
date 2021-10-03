@@ -1,0 +1,53 @@
+https://www.youtube.com/watch?v=8zD2ASUdLDg&list=PL9ok7C7Yn9A_JZFMrhrgEwfqQGiuyvSkB&index=30
+
+Here, we are creating an annotation to add authors to evry script
+
+1. Create a Annotation call (not a simple java class). While creating an annotation, please select 
+	Add @Retention check box and Select Runtime radio button and
+	Select Add @Target check box and Select Method check box
+
+2. Add the following code 
+	@Retention(RUNTIME)
+	@Target(METHOD)
+	public @interface Authors {
+	
+		public String[] authors(); //Add this line of code
+	}
+
+3. Add @Authors annotation at the top of every @Test annotation and add the author names as shown below
+	@Authors(authors = { "Manjunath" })
+	@Test 
+	public void testCase1() {
+
+		System.out.println("Test Case 1");
+	}
+	
+4. Add the following code in ExtentConfig class
+	public static void authors(String[] authors) {
+		for (String athr : authors) {
+			getExtentTest().assignAuthor(athr);
+		}
+	}
+	
+5. Add the following code in ListenerImp class in onStart()
+	
+	//Get the author assigned for respective @Test and add the authors in extent report
+	String[] authors = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(Authors.class).authors();
+	ExtentConfig.authors(authors);
+	
+	Ex: 
+	@Override
+	public void onTestStart(ITestResult result) 
+	{
+		String methodName = result.getMethod().getMethodName();
+		String methodDescription = result.getMethod().getDescription();
+		ExtentConfig.createTest("Script Name : "+methodName+"  Description : "+methodDescription);
+		
+		//Get the author assigned for respective @Test and add the authors in extent report
+		String[] authors = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(Authors.class).authors();
+		ExtentConfig.authors(authors);
+	}
+	
+	
+	
+
