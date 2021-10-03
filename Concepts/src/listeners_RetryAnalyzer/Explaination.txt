@@ -15,8 +15,11 @@ Steps to overcome above problem
  3. Create a class ReadDataFromExcel which will have a method to read all data from excel and store all the data of excel into List
  4. Create one more class AnnotationTransformer and implement IAnnotationTransformer interface and provide the implementation
  	for transform() method
+ 	
  5. Add the following code in transform()
- 
+ 	NOTE: Add the following piece of code in AnnotationTransformer class in else block
+		  annotation.setRetryAnalyzer(Retry.class);
+ 	
  	@Override
 	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) 
 	{
@@ -34,7 +37,9 @@ Steps to overcome above problem
 				{
 					//Set Invocation count
 					//methods.get(i).getMethod().setInvocationCount(Integer.parseInt(list.get(j).get("Invocation count")));
-					annotation.setRetryAnalyzer(Retry.class); //Setting Retry analyzer
+					
+					//Setting Retry analyzer
+					annotation.setRetryAnalyzer(Retry.class); 
 				}
 			}
 		}
@@ -66,8 +71,7 @@ Steps to overcome above problem
 		}
  	}
  
- 
- 6. Add the following code in testng.xml between <suite> and <test> to add this intercept class in <listener>
+ 7. Add the following code in testng.xml between <suite> and <test> to add this intercept class in <listener>
 
 	<suite name="Suite">
 		<listeners>
