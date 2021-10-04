@@ -1,0 +1,16 @@
+https://www.youtube.com/watch?v=drudGK9iA_8&list=PL9ok7C7Yn9A_JZFMrhrgEwfqQGiuyvSkB&index=40
+06:31
+
+Why WebDriverManager?
+	Every time it will use the same browser driver if we use System.setProperty() to setup browser specific paths
+	It will cause a problem when you are running scripts on different OS or different browser versions
+	To avoid this problem we will go for WebDriverManager
+	
+Usage in code
+1. Add Maven dependency
+2. Create a class WebDriverManager.chromedriver().setup(); //For setting up chrome browser
+
+
+NOTE:
+WebDriverManager will create a one properties file to handle driver exe updates and all and is located in
+C:\Users\Manjunath\.cache\selenium\resolution.properties
