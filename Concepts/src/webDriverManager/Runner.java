@@ -16,6 +16,9 @@ public class Runner {
 		
 		WebDriverManager.firefoxdriver().setup(); //Set up firefoxdriver
 		WebDriver driverFirefox = new FirefoxDriver(); //Launch chrome browser
+		
+		//For proxy
+		WebDriverManager.chromedriver().proxy("https://username:password@mycompanyproxy.com:port").setup();
 	}
 	
 

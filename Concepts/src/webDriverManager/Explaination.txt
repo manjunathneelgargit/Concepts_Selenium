@@ -6,6 +6,12 @@ Why WebDriverManager?
 	It will cause a problem when you are running scripts on different OS or different browser versions
 	To avoid this problem we will go for WebDriverManager
 	
+	Also some below listed common problems
+	Script worked properly yesterday but not today
+	Script working in my machine not in colleague/Client’s machine to avoid these problems we will go for WebDriverManager
+
+	
+	
 Usage in code
 1. Add Maven dependency
 2. Create a class WebDriverManager.chromedriver().setup(); //For setting up chrome browser
